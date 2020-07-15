@@ -27,12 +27,17 @@ class TakeAttendance extends Component
 
   componentDidMount(){
 
+	setInterval(() => {
     firebase.database().ref('keys/val')
-    .on('value',data => this.setState({key:data.val()}))
-    .then(() => {
+    .on('value',data => {
+			this.setState({key:data.val()});
+			}
+	)
+},500);
+
+
       this.show();
       this.start();
-    });
 
   }
 
@@ -62,6 +67,7 @@ show(){
           console.warn(code, message);
         })
         .then(() => {
+
 
           var url = 'http://api.airpollutionapi.com/1.0/aqi?lat='
                     +this.state.latitude+'&lon='
