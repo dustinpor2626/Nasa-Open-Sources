@@ -48,7 +48,7 @@ This app has multiple function and uses Nasa Open Source Apis , News Api , Air P
 
 ***
 
-### Planets of our Solar System
+### Info about the Planets of our Solar System
 
 <img src="screen/images/screenshot7.jpg" height='50%' width="30%" />
 
